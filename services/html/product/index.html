@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bootstrap 5 Website Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/image.css" rel="stylesheet">
+    <link href="/css/product/list.css" rel="stylesheet">
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/main.js"></script>
+</head>
+<body>
+<!--Header-->
+<div class="row col-12">
+    <div class="col-2"></div>
+    <div class="p-5 bg-primary text-white text-center col-8">
+        <h1>My First Bootstrap 5 Page</h1>
+        <p>Resize this responsive page to see the effect!</p>
+    </div>
+    <div class="col-2"></div>
+</div>
+<!--Navbar-->
+<div class="row col-12">
+    <div class="col-2"></div>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark col-sm-8">
+        <div class="container-fluid">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" href="/">Logo</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/product">Product</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/transaction">Transaction</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="col-2"></div>
+</div>
+<!--Page-->
+<div class="row col-12">
+    <div class="col-2"></div>
+    <div class="container mt-5 col-8">
+        <form id="product-form" class="row g-3" >
+            <div class="col-md-6">
+                <label for="name" class="form-label">Product Name</label>
+                <input type="text" id="name" class="form-control" required>
+            </div>
+            <div class="col-md-2">
+                <label for="typeSize" class="form-label">Type Size</label>
+                <input type="text" id="typeSize" class="form-control" required>
+            </div>
+            <div class="col-md-2">
+                <label for="marketType" class="form-label">Market Type</label>
+                <input type="text" id="marketType" class="form-control" required>
+            </div>
+            <div class="col-md-6">
+                <label for="image" class="form-label">Image</label>
+                <div class="custom-file-input-wrapper">
+                    <label for="image" class="btn btn-outline-secondary">Choose Image</label>
+                    <input type="file" id="image" class="custom-file-input" accept="image/*" required hidden>
+                    <span id="file-name" class="file-name">No file chosen</span>
+                </div>
+            </div>
+            <div>
+                <label for="defaultPrice" class="form-label">Default Price</label>
+                <input type="text" id="defaultPrice" class="form-control" required>
+            </div>
+            <div>
+                <label for="price" class="form-label">Price</label>
+                <input type="text" id="price" class="form-control" required>
+            </div>
+                <button type="submit" id="createProduct" class="btn btn-primary">Create Product</button>
+        </form>
+
+        <!--List of Products-->
+        <ul id="productList"></ul>
+
+        <!-- Import the main.js file as a module -->
+        <script type="module" src="../js/main.js"></script>
+    </div>
+    <div class="col-2"></div>
+</div>
+<!--Footer-->
+<div class="row col-12">
+    <div class="col-2"></div>
+    <div class="mt-5 p-4 bg-dark text-white text-center col-8">
+        <p>Footer</p>
+    </div>
+    <div class="col-2"></div>
+</div>
+</body>
+</html>
